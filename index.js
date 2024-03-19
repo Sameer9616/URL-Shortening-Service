@@ -41,9 +41,9 @@ app.get("/:shortId", async (req, res) => {
       { new: true }
     );
 
-    if (!entry) {
-      return res.status(404).send("URL not found");
-    }
+    // if (!entry) {
+    //   return res.status(404).send("URL not found");
+    // }
 
     // Check for URL expiration
     if (entry.expirationDate && entry.expirationDate < new Date()) {
